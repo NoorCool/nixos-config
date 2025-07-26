@@ -7,31 +7,33 @@ Nixvim and Home are modules. These will grow in the future.
 ## Flake & Home-Manager
 This is a flake setup where the packages pin pointed to ensure reproducibility. The `flake.nix` file defines inputs (dependencies like repositories for home-manager and nixvim), outputs (packages that can be build, and nixosConfiguration).
 
-> [!info]- Rebuild a flake
+> Rebuild a flake
+>
 > To rebuild a flake use: `sudo nixos-rebuild switch --flake .#my-host`
 
 The home-manager is used as a NixOS module, which means it rebuilds when the flake is rebuilt (no ability to do`home-manager rebuild`). It's a simple setup where home-manager is treated like any other NixOS module, and it is able to configure users (like the flake user) inside the NixOS configuration or even directly in the flake.
 
 The `home.nix` file defines the user's configuration (programs, dotfiles, etc.). Currently in this setup no config files are being managed by home-manager yet, but this will soon follow so all the configs of my programs can be shared across hosts.
 
->[!info]- Transfer dotfiles to Home Manager
->For example how to transfer the Zathura config to home-manager:
->```nix
->xdg.configFile."zathura/zathurarc".source = ./dotfiles/zathurarc;
->```
->By having a `dotfiles` folder in the `home` folder where all the dotfiles, including the Zathura one, will be kept.
+> Transfer dotfiles to Home Manager
 >
->Alternative approach is to do it in nix language, import in `home.nix`, and replace the text: 
->```nix
-xdg.configFile."zathura/zathurarc".text = ''
-  set font "monospace 12"
-  set recolor true
-  set recolor-keephue true
-  set adjust-open width
-  set statusbar-h-padding 10
-  set statusbar-v-padding 5
-'';
->```
+> For example how to transfer the Zathura config to home-manager:
+> ```nix
+> xdg.configFile."zathura/zathurarc".source = ./dotfiles/zathurarc;
+> ```
+> By having a `dotfiles` folder in the `home` folder where all the dotfiles, including the Zathura one, will be kept.
+>
+> Alternative approach is to do it in nix language, import in `home.nix`, and replace the text: 
+> ```nix
+> xdg.configFile."zathura/zathurarc".text = ''
+>   set font "monospace 12"
+>   set recolor true
+>   set recolor-keephue true
+>   set adjust-open width
+>   set statusbar-h-padding 10
+>   set statusbar-v-padding 5
+> '';
+> ```
 
 ## Contents of my setup
 ### Desktop environment
