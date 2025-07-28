@@ -34,7 +34,7 @@
 			name = "Bibata-Modern-Ice";
 			package = home.packages.bibata-cursors;
 			size = 24;
-		}
+		};
 	};
 
 	home.sessionVariables = {
