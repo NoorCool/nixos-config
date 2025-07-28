@@ -20,7 +20,7 @@
 
 			# Packages
 			./nixvim/nixvim.nix
-			./packages.nix
+			./systempackages.nix
 
 			# Flake modules
 			inputs.nixvim.nixosModules.nixvim
