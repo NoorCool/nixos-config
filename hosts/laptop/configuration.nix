@@ -19,7 +19,7 @@
 			./graphics.nix
 
 			# Packages
-			./nixvim/nixvim.nix
+			../modules/nixvim/nixvim.nix
 			./systempackages.nix
 
 			# Flake modules
