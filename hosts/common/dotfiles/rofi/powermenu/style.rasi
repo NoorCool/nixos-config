@@ -1,0 +1,104 @@
+
+* {
+	background : #282828;
+	background-alt : #1B1B1B;
+	foreground : #EBDBB2;
+	blue : #548588;
+	orange : #FE8019;
+	green : #689D6A;
+	red : #CC241D;
+	dark-yellow-light: #665c54;
+}
+
+configuration {
+	show-icons : false;
+}
+
+window {
+	transparency : "real";
+	location : center;
+	fullscreen : false;
+	width : 500px;
+	height : 150px;
+	enabled : true;
+	border : 3px;
+	border-color : @background-alt;
+	cursor : "default";
+	background-color : @background;
+}
+
+mainbox {
+	enabled : true;
+	spacing : 12px;
+	padding : 15px;
+	background-color : transparent;
+	children : ["inputbar", "listview"];
+}
+
+inputbar {
+	location : center;
+	padding : 8px;
+	background-color : @background;
+	children : ["prompt"];
+}
+
+prompt {
+	padding : 6px;
+	border-radius : 0px;
+	background-color : transparent;
+	text-color : @foreground;
+}
+
+message {
+	padding : 10px;
+	background-color : transparent;
+	text-color : @foreground;
+}
+
+textbox {
+	background-color : inherit;
+	text-color : inherit;
+	vertical-align : 0.5;
+	horizontal-align : 0.5;
+	placeholder-color : @foreground;
+	blink : true;
+	markup : true;
+}
+
+error-message {
+	padding : 12px;
+	border : 0px solid;
+	background-color : @background;
+	text-color : @foreground;
+}
+
+listview {
+	enabled : true;
+	columns : 3;
+	lines : 1;
+	spacing : 18px;
+	background-color : transparent;
+	text-color : @foreground;
+}
+
+element {
+	enabled : true;
+	margin : 0px;
+	padding : 14px 10px;
+	border-color : @foreground;
+	background-color : @background-alt;
+	text-color : @foreground;
+	cursor : pointer;
+}
+
+element-text {
+	background-color : transparent;
+	text-color : inherit;
+	cursor : inherit;
+	vertical-align : 0.5;
+	horizontal-align : 0.5;
+}
+
+element selected.normal {
+	background-color : @dark-yellow-light;
+}

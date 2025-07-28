@@ -1,0 +1,107 @@
+{
+	"output" : "eDP-1",
+	"layer" : "top",
+	"position" : "top",
+	"spacing" : 0,
+	"reload_style_on_change" : true,
+
+	"margin-left" : 5,
+	"margin-right" : 5,
+	"margin-top" : 5,
+
+	"modules-left" : [
+		"clock",
+		"hyprland/workspaces",
+	],
+
+	"modules-center" : [
+	],
+
+	"modules-right" : [
+		"network",
+		"bluetooth",
+		"wireplumber",
+		"cpu",
+		"memory",
+		"disk",
+		"battery",
+	],
+
+	"cpu" : {
+		"format" : "CPU {usage}%",
+		"tooltip" : true,
+		"interval" : 1,
+  },
+
+	"disk" : {
+		"format" : "DISK {percentage_free}%",
+		"tooltip" : true,
+	},
+
+	"memory" : {
+		"format" : "MEM {percentage}%",
+		"tooltip" : true,
+		"tooltip-format" : "{used:0.1f}GB/{total:0.1f}GB mem",
+		"max-length" : 20,
+		"interval" : 1,
+	},
+
+	"network" : {
+		"format-wifi" : "ᯤ",
+		"tooltip" : true,
+		"tooltip-format" : "{essid} {signalStrength}%",
+		"rotate" : 0,
+		"format-disconnected" : "no wifi",
+	},
+
+	"wireplumber" : {
+		"format" : "{icon}",
+		"format-muted" : "X",
+		"rotate" : 0,
+		"tooltip" : true,
+		"tooltip-format" : "{volume}",
+		"format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+	},
+
+	"bluetooth" : {
+		"format" : "ᛒ",
+		"format-on" : "ᛒ",
+		"format-disabled" : "",
+		"on-click" : "bluetoothctl connect F8:AB:E5:54:C9:77",
+		"tooltip" : true,
+		"tooltip-format" : "{status}",
+		"tooltip-format-on" : "{status}",
+		"tooltip-format-connected" : "{device_alias} {device_battery_percentage}%",
+		"interval" : 1,
+	},
+
+	"hyprland/workspaces" : {
+		"format" : "{icon}",
+		"on-click" : "activate",
+		"format-icons" : {
+			"1" : "1",
+		},
+		"active" : " ",
+		"sort-by-number" : true
+	},
+
+	"battery" : {
+		"states" : {
+			"good" : 100,
+			"warning" : 30,
+			"critical" : 20
+		},
+		"format" : "{capacity}%",
+		"rotate" : 0,
+		"format-charging" : "⚡{capacity}%",
+		"format-plugged" : "Plugged-in: {capacity}%",
+		"format-alt" : "{time}",
+		"tooltip" : false,
+	},
+
+	"clock" : {
+		"format" : "{:%H:%M | %d-%m-%Y}",
+		"tooltip" : false,
+	},
+}
+

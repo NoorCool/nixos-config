@@ -13,7 +13,7 @@
 		rofi-wayland
 		hyprshot
 		wl-clipboard
-		swaybg 
+		swaybg
 		hyprlock
 		hyprcursor
 		brightnessctl

@@ -1,0 +1,229 @@
+/* GRUVBOX SCHEME */
+@define-color foreground #ebdbb2;
+@define-color background #282828;
+@define-color alt-background #1b1b1b;
+@define-color color_red #cc241d;
+@define-color color_blue #458588;
+@define-color color_darkgreen #689d6a;
+@define-color color_green #98971a;
+@define-color alt-foreground #a89984;
+@define-color color_yellow #fabd2f;
+@define-color color_orange #fe8019;
+@define-color color_pink #ea6962;
+
+/* START STYLE */
+* {	
+		font-family : "DejaVu Sans";
+		font-weight : 500;
+	}
+
+window#waybar {
+		background-color : @background;
+    color : @foreground;
+		border-top : 3px solid;
+		border-bottom : 3px solid;
+		border-color : @alt-background;
+  }
+
+  window#waybar.hidden {
+    opacity : 0.98;
+  }
+	
+	/* TOOLTIP */
+	tooltip {
+    font-size : 10px;
+    background : @background;
+    opacity : 0.9;
+		border-radius : 0px;
+		border-width : 2px;
+		border-style : solid;
+		border-color : @alt-background;
+	}
+
+	/* ----------------
+	 * 		SECTIONS
+	 * 		---------------*/
+
+	.modules-right {
+		font-size : 12px;
+		border-top : 3px solid;
+		border-right : 3px solid;
+		border-bottom : 3px solid;
+		border-color : @alt-background;
+	}
+	
+	.modules-center {
+		border-top : 3px solid;
+		border-bottom : 3px solid;
+		border-color : @alt-background;
+	}
+
+	.modules-left {
+		font-size : 14px;
+		border-top : 3px solid;
+		border-left : 3px solid;
+		border-bottom : 3px solid;
+		border-color : @alt-background;
+	}
+
+	/*--------------
+	 *		LEFT
+	 *--------------*/
+
+	/* CLOCK */
+  #clock {
+		font-size : 12px;
+    background-color : @background;
+    padding-right : 1em;
+    padding-top : 3px;
+    padding-left : 1em;
+    border-right : 3px;
+		border-right-style : solid;
+		border-right-color : @color_green;
+  }
+
+  /* WORKSPACES */
+  #workspaces {
+		box-shadow : none;
+		color : @foreground;
+		font-size : 14px;
+    padding-left : 1em;
+  }
+
+	#workspaces button {
+		all : unset;
+		
+		font-family : "DejaVu Sans";
+		font-size : 12px;
+
+		padding : 0 6px;
+		margin-top : 3px;
+		margin-bottom : 3px;
+
+    color : @foreground;
+		background-color : transparent;
+		border-radius : 2px;
+    }
+
+  #workspaces button:hover {
+		background-color : transparent;
+		border : none;
+		outline : none;
+		box-shadow : none;
+
+		color : @color_orange;
+		font-size : 16px;
+		font-weight : 800;
+		}
+	
+	#workspaces button:focus {
+		outline: none;
+		box-shadow: none;
+		background-color : transparent;
+	}
+
+  #workspaces button.visible.active {
+		color : @color_red;
+		background-color : @background;
+		font-size : 16px;
+	}
+
+	#workspaces button.visible {
+		color : @color_blue;
+	}
+
+	#workspaces > button.active:hover {
+		background-color : @background;
+		border : none;
+
+		color : @color_orange;
+		font-size : 16px;
+		font-weight : 800;
+	}
+
+	/*-----------------------
+	 * 		RIGHT
+	 *----------------------*/
+
+  /* CPU */
+	#cpu {
+		padding-right : 0em;
+		padding-left : 1em;
+		border-left : 3px;
+		border-left-style : solid;
+		border-left-color : @color_green;
+	}
+
+	/* MEMORY */
+	#memory {
+		padding-left : 0.5em;
+		padding-right : 0.5em;
+	}
+
+	/* DISK */
+	#disk {
+		padding-left : 0em;
+		padding-right : 1em;
+	}
+
+	/* WIREPLUMBER */
+	#wireplumber {
+		background-color : @background;
+		padding-right : 1em;
+		padding-left : 1em;
+	}
+
+  #wireplumber.muted {
+    color : @color_red;
+  }
+
+	/* NETWORK */
+	#network {
+		padding-right : 1em;
+		padding-left : 1em;
+	}
+
+  #network.disconnected {
+    color : @color_red;
+  }
+
+	/* BATTERY */
+	#battery {
+	  color : @foreground;
+		padding-left : 1.5em;
+		padding-right : 1.5em;
+		border-left : 3px;
+		border-left-style : solid;
+		border-left-color : @color_green;
+	}
+
+  #battery.charging,
+	#battery.plugged {
+    color : @color_yellow;
+		border-left-color : @color_yellow;
+  }
+
+  #battery.good:not(.charging) {
+    color : @color_green;
+		border-left-color : @color_reen;
+  }
+
+  #battery.warning:not(.charging) {
+    color : @color_orange;
+		border-left-color : @color_orange;
+  }
+
+  #battery.critical:not(.charging) {
+    color : @color_red;
+		border-left-color : @color_red;
+  }
+
+	/* BLUETOOTH */
+  #bluetooth {
+    color : @foreground;
+	}
+
+	#bluetooth.connected {
+		color : @color_blue;
+	}
+

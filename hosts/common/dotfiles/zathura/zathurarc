@@ -1,0 +1,54 @@
+# Notification colors
+set notification-error-bg "rgba(40,40,40,1)" # Dark gruvbox background
+set notification-error-fg "rgba(251,73,52,1)" # Gruvbox red
+
+set notification-warning-bg "rgba(40,40,40,1)"
+set notification-warning-fg "rgba(250,189,47,1)" # Gruvbox yellow
+
+set notification-bg "rgba(40,40,40,1)"
+set notification-fg "rgba(235,219,178,1)" # Gruvbox light text
+
+# Completion menu
+set completion-bg "rgba(60,56,54,1)" #Gruvbox dark1
+set completion-fg "rgba(235,219,178,1)" # Gruvbox light1
+
+set completion-group-bg "rgba(40,40,40,1)" # Gruvbox bg
+set completion-group-fg "rgba(146,131,116,1)" # Gruvbox gray
+
+set completion-highlight-bg "rgba(250,189,47,1)" # Gruvbox yellow
+set completion-highlight-fg "rgba(40,40,40,1)" # Inverted for contrast
+
+# Index mode
+set index-bg "rgba(40,40,40,1)"
+set index-fg "rgba(235,219,178,1)"
+
+set index-active-bg "rgba(250,189,47,1)" # Gruvbox yellow
+set index-active-fg "rgba(40,40,40,1)"
+
+# Inputbar
+set inputbar-bg "rgba(40,40,40,1)"
+set inputbar-fg "rgba(235,219,178,1)"
+
+# Statusbar
+set statusbar-bg "rgba(40,40,40,1)"
+set statusbar-fg "rgba(235,219,178,1)"
+
+# Highlight colors
+set highlight-color "rgba(250,189,47,0.5)" # Gruvbox yellow (soft)
+set highlight-active-color "rgba(254,128,25,0.5)" # Gruvbox orange
+
+# Default document background/foreground
+set default-bg "rgba(40,40,40,1)"
+set default-fg "rgba(235,219,178,1)"
+
+# Loading indicator
+set render-loading true
+set render-loading-bg "rgba(40,40,40,1)"
+set render-loading-fg "rgba(235,219,178,1)"
+
+# Recoloring (inverted colors for dark mode)
+set recolor-lightcolor "rgba(40,40,40,1)"
+set recolor-darkcolor "rgba(235,219,178,1)"
+set recolor "true"
+set recolor-keephue "true"
+
