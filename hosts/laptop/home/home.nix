@@ -20,6 +20,8 @@
 		godot
 		zathura # pdf-viewer
 		gimp # Image manipulation
+		ffmpeg # AV recording
+		mpv # Mediaplayer
 		
 		## CLI goodness ##
 		cbonsai # Terminal animation
