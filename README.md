@@ -1,4 +1,18 @@
-# My NixOS configuration
+<div align="center">
+    <h1 align="center">My NixOS configuration</h1>
+    <p align="center">
+        Minimalist NixOS setup with Hyprland
+    </p>
+</div>
+
+</br>
+
+## About The Project
+
+This configuration is focused on having only the essential visual and practical elements, which are also lightweight and consume the least amount of resources. It has a sober and **minimalist style** that focuses on productivity without sacrificing a clean and calm aesthetic.
+
+</br>
+
 ## File setup
 Files are divided by their main function, so that editing this main function immediately gives an overview of all settings etc. related to that function.
 
@@ -8,7 +22,7 @@ Nixvim and Home are modules. These will grow in the future.
 This is a flake setup where the packages pin pointed to ensure reproducibility. The `flake.nix` file defines inputs (dependencies like repositories for home-manager and nixvim), outputs (packages that can be build, and nixosConfiguration).
 
 > Rebuild a flake
->
+> ---
 > To rebuild a flake use: `sudo nixos-rebuild switch --flake .#my-host`
 
 The home-manager is used as a NixOS module, which means it rebuilds when the flake is rebuilt (no ability to do`home-manager rebuild`). It's a simple setup where home-manager is treated like any other NixOS module, and it is able to configure users (like the flake user) inside the NixOS configuration or even directly in the flake.
@@ -16,7 +30,7 @@ The home-manager is used as a NixOS module, which means it rebuilds when the fla
 The `home.nix` file defines the user's configuration (programs, dotfiles, etc.). Currently in this setup no config files are being managed by home-manager yet, but this will soon follow so all the configs of my programs can be shared across hosts.
 
 > Transfer dotfiles to Home Manager
->
+> ---
 > For example how to transfer the Zathura config to home-manager:
 > ```nix
 > xdg.configFile."zathura/zathurarc".source = ./dotfiles/zathurarc;
@@ -35,7 +49,22 @@ The `home.nix` file defines the user's configuration (programs, dotfiles, etc.).
 > '';
 > ```
 
+</br>
+
 ## Contents of my setup
+### Main visual
+![start](docs/MultipleApplicationSetup.png)
+
+<details>
+    <summary>Other visuals</summary>
+
+![start](docs/RofiDrunSetup.png)
+![start](docs/RofiPowerMenuSetup.png)
+
+</details>
+
+</br>
+
 ### Desktop environment
 | *Category*         | *Application* |
 | ------------------ | ------------- |
