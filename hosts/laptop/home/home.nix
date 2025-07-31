@@ -19,6 +19,7 @@
 		obsidian
 		godot
 		zathura # pdf-viewer
+		gimp # Image manipulation
 		
 		## CLI goodness ##
 		cbonsai # Terminal animation
