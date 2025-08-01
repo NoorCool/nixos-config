@@ -65,8 +65,6 @@ Current main minimal NixOS Linux setup with Hyprland. Configuration with (mostly
 
 </details>
 
-</br>
-
 ### Desktop resume
 | *Category*         | *Application* |
 | ------------------ | ------------- |
