@@ -9,6 +9,9 @@
 		GODOT_DISPLAY_DRIVER = "wayland";
 		XCURSOR_THEME = "Bibata-Modern-Ice";
 		XCURSOR_SIZE  = "24";
+		MOZ_ENABLE_WAYLAND = "1";
+    QT_QPA_PLATFORM = "wayland";
+    GDK_BACKEND = "wayland";
 	};
 }
 	
