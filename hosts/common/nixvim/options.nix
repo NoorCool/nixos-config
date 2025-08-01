@@ -23,6 +23,7 @@
 			ignorecase = true;
 			smartcase = true;
 			ruler = true;
+			cursorline = true;
 
 			# General
 			wrap = false;
