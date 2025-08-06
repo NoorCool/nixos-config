@@ -30,15 +30,6 @@
 		bibata-cursors
 	];
 
-	gtk = {
-		enable = true;
-
-		cursorTheme = {
-			name = "Bibata-Modern-Ice";
-			size = 24;
-		};
-	};
-
 	home.sessionVariables = {
 		XCURSOR_THEME = "Bibata-Modern-Ice";
 		XCURSOR_SIZE = 24;
