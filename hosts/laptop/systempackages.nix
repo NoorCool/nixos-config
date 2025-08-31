@@ -21,6 +21,9 @@
 		## Fetch thingies ##
 		nix-prefetch
 		nix-prefetch-git
+
+		## zip ##
+		zip
 	];
 
 	programs.steam.enable = true;
