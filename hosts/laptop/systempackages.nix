@@ -24,6 +24,7 @@
 
 		## zip ##
 		zip
+		unzip
 	];
 
 	programs.steam.enable = true;
