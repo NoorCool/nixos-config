@@ -55,13 +55,13 @@ The `home.nix` file defines the user's configuration (programs, dotfiles, etc.).
 Current main minimal NixOS Linux setup with Hyprland. Configuration with (mostly) Gruvbox Dark and a _Le Fabuleux Destin d'Amélie Poulain_ theme. Only the essential visuals are set up in terms of Waybar, Hyprland and color scheming. Minimal apps are installed to focus on productivity, with a balance of relaxing games via Steam.
 
 ### Main visual
-![start](docs/MultipleApplicationSetup.png)
+![start](docs/Setup.png)
 
 <details>
     <summary>Other visuals</summary>
 
-![start](docs/RofiDrunSetup.png)
-![start](docs/RofiPowerMenuSetup.png)
+![start](docs/RofiSetup.png)
+![start](docs/RofiLock.png)
 
 </details>
 
@@ -85,4 +85,5 @@ Current main minimal NixOS Linux setup with Hyprland. Configuration with (mostly
 | Games              | Steam         |
 | Webbrowser         | FireFox       |
 | Game Engine        | Godot         |
-
+| Media Player       | mpv           |
+| Image Editor       | GIMP          |
