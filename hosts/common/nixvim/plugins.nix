@@ -190,6 +190,11 @@
 			};
 		};
 
+		## Lazy Git ##
+		lazygit = {
+			enable = true;
+		};
+
 		## Telescope ##
 		telescope = {
 			enable = true;

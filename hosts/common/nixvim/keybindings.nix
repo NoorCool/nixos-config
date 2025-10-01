@@ -46,9 +46,19 @@
 
 		#Quit terminal mode
 		{
-			mode = ["n"];
-			key = "<F1>";
+			mode = [
+				"n"
+				"t"
+			];
+			key = "<C-x>";
 			action = "<C-\><C-n>";
+		}
+
+		#Lazy git
+		{
+			mode = ["n"];
+			key = "<leader>gg";
+			action = "<cmd>LazyGit<CR>";
 		}
 	];
 }
