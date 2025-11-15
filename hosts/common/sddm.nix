@@ -1,9 +1,11 @@
 { pkgs }:
 
 let
-	bg = $HOME/Pictures/wallpaper1.png
+	bg = pkgs.fetchurl {
+		url = "https://raw.githubusercontent.com/NoorCool/wallpapers/main/wallpaperNix.png";
+		sha256 = "1dp3pxbfldln4amg6rqn7n6mfqb4r46pnb78g40ngqrgm60gw4p7";
+	};
 in
-
 pkgs.stdenv.mkDerivation {
 	name = "sddm-theme";
 
@@ -17,6 +19,7 @@ pkgs.stdenv.mkDerivation {
 	installPhase = ''
 		mkdir -p $out
 		cp -R ./* $out/
-		sed -i 's|ConfigFile="Themes/astronaut.conf"|ConfigFile="Themes/jake_the_dog.conf"|' metadata.desktop
+		cp -r ${bg} $out/Backgrounds/astronaut.png
+		sed -i '/PartialBlur="true"/c\PartialBlur="false"' $out/Themes/astronaut.conf
 	'';
 }

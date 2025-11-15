@@ -8,6 +8,14 @@
 			enable = true;
 			package = pkgs.kdePackages.sddm;
 			wayland.enable = true;
+			theme = "${import ../common/sddm.nix {inherit pkgs; }}";
+			extraPackages = with pkgs; [
+				kdePackages.waylib
+				kdePackages.qt6ct
+				kdePackages.qtsvg
+				kdePackages.qtvirtualkeyboard
+				kdePackages.qtmultimedia
+			];
 		};
 	};
 

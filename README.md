@@ -9,7 +9,7 @@
 
 ## About The Project
 
-This configuration is focused on having only the essential visual and practical elements. It focuses on productivity; Python development, Godot game development, Obsidian for notetaking, Gimp for art, ...
+This configuration is focused on productivity: Python development, Godot game development, Obsidian for notetaking, Gimp for art, ...
 
 </br>
 
@@ -29,7 +29,7 @@ The home-manager is used as a NixOS module, which means it rebuilds when the fla
 
 The `home.nix` file defines the user's configuration (programs, dotfiles, etc.). Currently in this setup no config files are being managed by home-manager yet, but this will soon follow so all the configs of my programs can be shared across hosts.
 
-> Transfer dotfiles to Home Manager
+> Transfer dotfiles to Home Manager is still a work-in-progress
 > -
 > For example how to transfer the Zathura config to home-manager:
 > ```nix
@@ -52,7 +52,7 @@ The `home.nix` file defines the user's configuration (programs, dotfiles, etc.).
 </br>
 
 ## Dotfiles
-Current main minimal NixOS Linux setup with Hyprland. Configuration with (mostly) Gruvbox Dark and a _Le Fabuleux Destin d'Amélie Poulain_ theme. Only the essential visuals are set up in terms of Waybar, Hyprland and color scheming. Minimal apps are installed to focus on productivity, with a balance of relaxing games via Steam.
+Configuration with (mostly) Gruvbox Dark and a _Le Fabuleux Destin d'Amélie Poulain_ theme. Only the essential visuals are set up in terms of Waybar, Hyprland and color scheming.
 
 ### Main visual
 ![start](docs/Setup.png)
