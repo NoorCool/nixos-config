@@ -16,6 +16,7 @@
 		vesktop
 
 		## Productivity ##
+		obs-studio
 		obsidian
 		godot
 		zathura # pdf-viewer
