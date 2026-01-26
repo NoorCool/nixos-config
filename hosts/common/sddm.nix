@@ -2,8 +2,8 @@
 
 let
 	bg = pkgs.fetchurl {
-		url = "https://raw.githubusercontent.com/NoorCool/wallpapers/main/wallpaperNix.png";
-		sha256 = "1dp3pxbfldln4amg6rqn7n6mfqb4r46pnb78g40ngqrgm60gw4p7";
+		url = "https://raw.githubusercontent.com/NoorCool/wallpapers/main/wallpaperXFiles2.png";
+		sha256 = "1bbya2s4a6ryga9pcgzia43lyyjzbf699rp1pa1sd8r9zyfc20ay";
 	};
 in
 pkgs.stdenv.mkDerivation {

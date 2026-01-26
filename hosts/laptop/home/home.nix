@@ -14,6 +14,7 @@
 		firefox
 		spotify
 		vesktop
+		#space-cadet-pinball
 
 		## Productivity ##
 		obs-studio

@@ -10,7 +10,7 @@
 		pulse.enable = true;
 	};
 	
-# Bluetooth settings
+	# Bluetooth settings
 	hardware.bluetooth = {
 		enable = true;
 		powerOnBoot = true;
