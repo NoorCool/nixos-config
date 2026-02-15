@@ -14,12 +14,11 @@
 		firefox
 		spotify
 		vesktop
-		#space-cadet-pinball
 
 		## Productivity ##
 		obs-studio
 		obsidian
-		godot
+		godot-mono
 		zathura # pdf-viewer
 		gimp # Image manipulation
 		mpv # Mediaplayer

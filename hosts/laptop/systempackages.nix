@@ -10,7 +10,7 @@
 
 		## Display ##
 		waybar
-		rofi-wayland
+		rofi
 		hyprshot
 		wl-clipboard
 		swaybg

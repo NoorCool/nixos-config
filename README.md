@@ -55,13 +55,12 @@ The `home.nix` file defines the user's configuration (programs, dotfiles, etc.).
 Configuration with (mostly) Gruvbox Dark and a _Le Fabuleux Destin d'Amélie Poulain_ theme. Only the essential visuals are set up in terms of Waybar, Hyprland and color scheming.
 
 ### Main visual
-![start](docs/Setup.png)
+![start](docs/Setup15022026.png)
 
 <details>
     <summary>Other visuals</summary>
 
-![start](docs/RofiSetup.png)
-![start](docs/RofiLock.png)
+![start](docs/RofiSetup15022026.png)
 
 </details>
 

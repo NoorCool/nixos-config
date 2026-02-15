@@ -149,19 +149,21 @@
 		treesitter-textobjects = {
 			enable = true;
 
-			select = {
-				enable = true;
-				lookahead = true;
-			};
+			settings = {
+				select = {
+					enable = true;
+					lookahead = true;
+				};
 
-			move = {
-				enable = true;
-				setJumps = true;
-			};
+				move = {
+					enable = true;
+					set_jumps = true;
+				};
 
-			lspInterop = {
-				enable = true;
-				border = "rounded";
+				lsp_interop = {
+					enable = true;
+					border = "rounded";
+				};
 			};
 		};
 
@@ -225,4 +227,4 @@
 			};
 		};
 	};
-} 
+}
