@@ -52,13 +52,10 @@ The `home.nix` file defines the user's configuration (programs, dotfiles, etc.).
 </br>
 
 ## Dotfiles
-Configuration with (mostly) Gruvbox Dark and a _Le Fabuleux Destin d'Amélie Poulain_ theme. Only the essential visuals are set up in terms of Waybar, Hyprland and color scheming.
+The configuration is minimal, uses base16 color schemes based on the N64 color palette. The wallpapers get picked randomly from a folder with set of black-based wallpapers, including X-Files, N64, and music themed images. Only the essential visuals are set up in terms of Waybar, Rofi, Hyprland and color scheming.
 
 ### Main visual
 ![start](docs/Setup15022026.png)
-
-<details>
-    <summary>Other visuals</summary>
 
 ![start](docs/RofiSetup15022026.png)
 
