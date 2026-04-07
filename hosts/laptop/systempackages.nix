@@ -17,6 +17,7 @@
 		hyprlock
 		hyprcursor
 		brightnessctl
+		playerctl
 
 		## Fetch thingies ##
 		nix-prefetch
