@@ -1,4 +1,4 @@
-{ self, inputs, pkgs, lib, ... }:
+{ self, inputs, pkgs, lib, config, ... }:
 
 {
 	# Plugins
@@ -107,7 +107,7 @@
 		treesitter = {
 			enable = true;
 
-			grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+			grammarPackages = with config.plugins.treesitter.package.builtGrammars; [
 				lua
 				nix
 				css
@@ -167,9 +167,6 @@
 			};
 		};
 
-		## Icons ##
-		web-devicons.enable = true;
-
 		## Indents ##
 		indent-blankline = {
 			enable = true;
@@ -205,6 +202,18 @@
 		## Nvim tree ##
 		nvim-tree = {
 			enable = true;
+
+			settings = {
+				renderer = {
+					icons = {
+						show = {
+							file = false;
+							folder = false;
+							folder_arrow = false;
+						};
+					};
+				};
+			};
 		};
 
 		## Lua Line ##
@@ -213,7 +222,7 @@
 
 			settings = {
 				options = {
-					icons_enable = true;
+					icons_enable = false;
 					always_divide_middle = true;
 					always_show_tabline = true;
 					globalstatus = false;

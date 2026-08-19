@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
 {
-	# Greeter SDDM with default to hyprland
 	services.displayManager = {
 		defaultSession = "hyprland";
 	};
@@ -11,4 +10,12 @@
 		enable = true;
 		xwayland.enable = true;
 	};
+
+	#xdg.portal = {
+		#enable = true;
+		#extraPortals = [
+			#pkgs.xdg-desktop-portal-hyprland
+		#];
+	#};
+
 }
