@@ -7,11 +7,6 @@
 
 </br>
 
-## About The Project
-
-This configuration is focused on productivity: Python development, Godot game development, Obsidian for notetaking, Gimp for art, ...
-
-</br>
 
 ## File setup
 Files are divided by their main function, so that editing this main function immediately gives an overview of all settings etc. related to that function.
@@ -52,13 +47,7 @@ The `home.nix` file defines the user's configuration (programs, dotfiles, etc.).
 </br>
 
 ## Dotfiles
-The configuration is minimal, uses base16 color schemes based on the N64 color palette. The wallpapers get picked randomly from a folder with set of black-based wallpapers, including X-Files, N64, and music themed images. Only the essential visuals are set up in terms of Waybar, Rofi, Hyprland and color scheming.
-
-### Main visual
-![start](docs/Setup15022026.png)
-
-![start](docs/RofiSetup15022026.png)
-
+*to be  added*
 </details>
 
 ### Desktop resume
