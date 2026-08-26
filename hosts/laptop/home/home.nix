@@ -2,6 +2,7 @@
 
 {
 	imports = [
+		#./hyprland/hyprland.nix
 	];
 
 	# Home-manager settings
