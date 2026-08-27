@@ -15,6 +15,13 @@
 					scale = "1.33",
 				})
 
+				hl.monitor({
+					output = "DP-1",
+					mode = "1920x1080@60",
+					position = "0x-1080",
+					scale = "1.00",
+				})
+
 				local terminal = "kitty"
 				local menu = "rofi -show drun"
 
@@ -150,9 +157,13 @@
 
 				-- Switch workspaces
 				for i = 1, 10 do
-					local key = i % 10 -- 10 maps to key 0
-					hl.bind(mainMod .. " + " .. key,             hl.dsp.focus({ workspace = i}))
-					hl.bind(mainMod .. " + SHIFT + " .. key,     hl.dsp.window.move({ workspace = i }))
+					local code = i + 9
+
+					hl.bind(mainMod .. " + code:" .. code,
+						hl.dsp.focus({ workspace = i }))
+
+					hl.bind(mainMod .. " + SHIFT + code:" .. code,
+						hl.dsp.window.move({ workspace = i }))
 				end
 
 				-- Scroll through existing workspaces with mainMod + scroll
