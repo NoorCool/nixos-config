@@ -1,0 +1,172 @@
+@import "colors.css";
+
+* {
+  font-family: "Monospace";
+  font-weight: bold;
+  font-size: 11px;
+}
+
+window#waybar {
+  background: @background;
+  border-radius: 0px;
+}
+
+tooltip {
+  background: @background;
+  color: @foreground;
+  font-size: 13px;
+  border-radius: 0px;
+  border: 2px solid @alt-background;
+}
+
+#clock {
+	font-size: 16px;
+  background: transparent;
+  color: @foreground;
+  border-radius: 0px;
+
+  margin: 3px 4px;
+  padding: 10px 2px;
+}
+
+#workspaces {
+	font-size: 16px;
+  background: transparent;
+  color: @foreground;
+  border-radius: 0px;
+
+  margin: 3px 4px;
+  padding: 10px 2px;
+}
+
+#backlight,
+#cpu,
+#memory,
+#network,
+#bluetooth,
+#battery,
+#disk,
+#wireplumber {
+  background: transparent;
+  color: @foreground;
+  border-radius: 0px;
+
+  margin: 3px 4px;
+	padding: 10px 4px;
+}
+
+/* Module containers */
+
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------- Workspaces ---------------- */
+
+#workspaces {
+	font-size: 14px;
+  text-shadow: none;
+  box-shadow: none;
+  transition: 0.2s ease;
+
+  padding: 0;
+  margin: 0px 0;
+
+  color: transparent;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+#workspaces button {
+  padding: 5px 2px;
+  margin: 0px 0;
+
+  color: @foreground;
+  background: transparent;
+
+  border: none;
+  border-radius: 0px;
+
+  transition: 0.2s ease;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#workspaces button.active {
+  background: @color2;
+  color: @background;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#workspaces button.focused {
+  background: @alt-background;
+  color: @foreground;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#workspaces button.visible {
+  background: @foreground;
+  color: @background;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#workspaces button:hover {
+	color: @background;
+	background: @foreground;
+	border: none;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#workspaces button.urgent {
+  background: @background;
+  color: @color1;
+  border: none;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#workspaces button.persistent {
+  color: @foreground;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#workspaces button.empty {
+  color: @background;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+/* ---------------- Individual modules ---------------- */
+
+#network,
+#bluetooth,
+#wireplumber,
+#cpu,
+#memory,
+#disk,
+#battery,
+#clock,
+#backlight {
+  transition: 0.2s ease;
+}
+
+#network:hover,
+#bluetooth:hover,
+#wireplumber:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#battery:hover,
+#clock:hover,
+#backlight:hover {
+  background: @alt-background;
+}

@@ -2,6 +2,8 @@
 
 {
 	# Audio settings
+	services.pulseaudio.enable = false;
+
 	services.pipewire = {
 		enable = true;
 		audio.enable = true;
@@ -14,8 +16,6 @@
 		};
 	};
 
-
-	
 	# Bluetooth settings
 	hardware.bluetooth = {
 		enable = true;

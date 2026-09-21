@@ -1,0 +1,57 @@
+# Notification colors
+set notification-error-bg "rgba(45,53,59,1)"            # bg0
+set notification-error-fg "rgba(230,126,128,1)"         # red
+
+set notification-warning-bg "rgba(45,53,59,1)"
+set notification-warning-fg "rgba(219,188,127,1)"       # yellow
+
+set notification-bg "rgba(45,53,59,1)"
+set notification-fg "rgba(211,198,170,1)"               # fg
+
+# Completion menu
+set completion-bg "rgba(52,63,68,1)"                    # bg1
+set completion-fg "rgba(211,198,170,1)"                 # fg
+
+set completion-group-bg "rgba(45,53,59,1)"              # bg0
+set completion-group-fg "rgba(157,169,160,1)"           # grey1
+
+set completion-highlight-bg "rgba(127,187,179,1)"       # blue
+set completion-highlight-fg "rgba(45,53,59,1)"          # bg0
+
+# Index mode
+set index-bg "rgba(45,53,59,1)"
+set index-fg "rgba(211,198,170,1)"
+
+set index-active-bg "rgba(127,187,179,1)"               # blue
+set index-active-fg "rgba(45,53,59,1)"
+
+# Inputbar
+set inputbar-bg "rgba(45,53,59,1)"
+set inputbar-fg "rgba(211,198,170,1)"
+
+# Statusbar
+set statusbar-bg "rgba(45,53,59,1)"
+set statusbar-fg "rgba(211,198,170,1)"
+
+# Highlight colors
+set highlight-color "rgba(219,188,127,0.5)"             # yellow
+set highlight-active-color "rgba(230,126,128,0.5)"      # red
+
+# Default document background/foreground
+set default-bg "rgba(45,53,59,1)"
+set default-fg "rgba(211,198,170,1)"
+
+# Loading indicator
+set render-loading true
+set render-loading-bg "rgba(45,53,59,1)"
+set render-loading-fg "rgba(211,198,170,1)"
+
+# Recoloring (Everforest dark mode)
+set recolor-lightcolor "rgba(45,53,59,1)"               # bg0
+set recolor-darkcolor "rgba(211,198,170,1)"             # fg
+set recolor "true"
+set recolor-keephue "true"
+
+set selection-clipboard clipboard
+set continuous-hist-save false
+set history false

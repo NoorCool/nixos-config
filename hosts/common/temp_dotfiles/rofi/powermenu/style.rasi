@@ -1,13 +1,13 @@
 
 * {
-	background : #282828;
-	background-alt : #1B1B1B;
-	foreground : #EBDBB2;
-	blue : #548588;
-	orange : #FE8019;
-	green : #689D6A;
-	red : #CC241D;
-	dark-yellow-light: #665c54;
+	background : #2D353B;
+	background-alt : #343F44;
+	foreground : #D3C6AA;
+	blue : #7FBBB3;
+	orange : #E69875;
+	green : #A7C080;
+	red : #E67E80;
+	fg-placeholder : #9DA9A0;
 }
 
 configuration {
@@ -100,5 +100,5 @@ element-text {
 }
 
 element selected.normal {
-	background-color : @dark-yellow-light;
+	background-color : @blue;
 }

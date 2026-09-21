@@ -1,0 +1,158 @@
+* {
+    background: #2D353B;
+    background-alt: #343F44;
+    foreground: #D3C6AA;
+    blue: #7FBBB3;
+    orange: #E69875;
+    green: #A7C080;
+    red: #E67E80;
+    fg-placeholder: #9DA9A0;
+
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+configuration {
+    show-icons: true;
+}
+
+window {
+    transparency: "real";
+    fullscreen: true;
+
+    background-color: #00000080;
+
+    padding: 40px;
+    spacing: 20px;
+
+    children: [listview-split];
+}
+
+listview-split {
+    orientation: horizontal;
+    spacing: 24px;
+    children: [listview];
+}
+
+listview {
+    flow: horizontal;
+    fixed-columns: true;
+
+    columns: 4;
+    lines: 3;
+
+    spacing: 16px;
+
+    background-color: transparent;
+}
+
+element {
+    orientation: vertical;
+
+    children: [
+        element-icon,
+        element-text
+    ];
+
+    spacing: 8px;
+    padding: 10px;
+
+    border: 2px;
+    border-radius: 10px;
+    border-color: @background-alt;
+
+    background-color: @background-alt;
+}
+
+element-icon {
+    size: 180px;
+
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+
+    text-color: @foreground;
+
+    background-color: transparent;
+}
+
+element selected {
+    background-color: @blue;
+    border-color: @blue;
+}
+
+element selected.normal {
+    background-color: @blue;
+    border-color: @blue;
+}
+
+element selected.active {
+    background-color: @blue;
+    border-color: @blue;
+}
+
+element selected.urgent {
+    background-color: @red;
+}
+
+inputbar {
+    padding: 12px;
+
+    background-color: @background;
+
+    border-radius: 10px;
+
+    children: [
+        prompt,
+        entry
+    ];
+}
+
+prompt {
+    text-color: @green;
+    padding: 6px;
+}
+
+entry {
+    placeholder: "Search wallpapers...";
+    placeholder-color: @fg-placeholder;
+}
+
+textbox {
+    background-color: inherit;
+    text-color: inherit;
+}
+
+message {
+    enabled: false;
+}
+
+error-message {
+    enabled: false;
+}
+
+/* -------- Preview Panel -------- */
+
+@media ( enabled: env(PREVIEW, false)) {
+
+    icon-current-entry {
+        expand: true;
+        size: 85%;
+    }
+
+    listview-split {
+        children: [
+            listview,
+            icon-current-entry
+        ];
+    }
+
+    listview {
+        columns: 3;
+        lines: 3;
+    }
+}

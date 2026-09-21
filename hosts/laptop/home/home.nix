@@ -27,6 +27,7 @@
 		
 		## CLI goodness ##
 		cbonsai # Terminal animation
+		fastfetch # System fetch
 
 		## Decoration ##
 		bibata-cursors

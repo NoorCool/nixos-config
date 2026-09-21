@@ -1,0 +1,234 @@
+{ config, pkgs, ... }:
+
+{
+	programs.rofi = {
+		enable = true;
+
+		theme = ''
+			* {
+					background : #2D353B;
+					background-alt : #343F44;
+					foreground : #D3C6AA;
+
+					blue : #7FBBB3;
+					green : #A7C080;
+					yellow : #DBBC7F;
+					orange : #E69875;
+					red : #E67E80;
+
+					selected : @blue;
+					fg-placeholder : #9DA9A0;
+			}
+
+			configuration {
+				modi: "drun";
+				show-icons: true;
+				display-drun: "";
+				drun-display-format: "{name}";
+			}
+
+			/*****----- Main Window -----*****/
+			window {
+				transparency: "real";
+				location: center;
+				anchor: center;
+				fullscreen: true;
+
+				width: 100%;
+				height: 100%;
+
+				enabled: true;
+				margin: 0px;
+				padding: 0px;
+				border: 0px;
+				border-radius: 0px;
+				background-color: rgba(45,53,59,0.85);
+				cursor: "default";
+			}
+
+			/*****----- Main Box -----*****/
+			mainbox {
+				enabled: true;
+				spacing: 80px;
+				margin: 0px;
+				padding: 80px 100px;
+				background-color: transparent;
+				children: [ "inputbar", "listview" ];
+			}
+
+			/*****----- Input Bar -----*****/
+			inputbar {
+				enabled: true;
+				spacing: 12px;
+
+				margin: 0% 10%;
+				padding: 12px 18px;
+
+				border: 2px;
+				border-radius: 10px;
+				border-color: @background-alt;
+
+				background-color: @background-alt;
+				text-color: @foreground;
+
+				children: [ "prompt", "entry" ];
+			}
+
+			prompt {
+				enabled: true;
+				background-color: transparent;
+				text-color: @blue;
+			}
+	
+			textbox-prompt-colon {
+				enabled: true;
+				expand: false;
+				str: "::";
+				background-color: transparent;
+				text-color: @blue;
+			}
+		
+			entry {
+				enabled: true;
+				background-color: transparent;
+				text-color: @foreground;
+				placeholder: "Search...";
+				placeholder-color: @fg-placeholder;
+				cursor: text;
+			}
+
+			/*****----- List View -----*****/
+			listview {
+				enabled: true;
+
+				columns: 5;
+				lines: 4;
+
+				cycle: true;
+				dynamic: true;
+				scrollbar: false;
+
+				layout: vertical;
+
+				fixed-height: true;
+				fixed-columns: true;
+				expand: false;
+
+				spacing: 24px;
+				padding: 0px;
+
+				background-color: transparent;
+				text-color: @foreground;
+			}
+
+			/*****----- Scrollbar -----*****/
+			scrollbar {
+				handle-width: 6px;
+				handle-color: @blue;
+				border-radius: 8px;
+				background-color: @background-alt;
+			}
+
+			/*****----- Elements -----*****/
+			element {
+				orientation: vertical;
+
+				spacing: 12px;
+				margin: 0px;
+				padding: 32px 24px;
+
+				border: 0px;
+				border-radius: 16px;
+				border-color: transparent;
+
+				background-color: transparent;
+				text-color: @foreground;
+			}
+
+			/* Normal */
+			element normal.normal {
+				background-color: transparent;
+				text-color: @foreground;
+			}
+
+			/* Selected */
+			element selected.normal {
+				background-color: @blue;
+				border-color: @blue;
+				text-color: @background;
+			}
+
+			/* Remove alternate state colors */
+			element alternate.normal {
+				background-color: transparent;
+				text-color: @foreground;
+			}
+
+			element normal.active,
+			element alternate.active,
+			element selected.active,
+			element normal.urgent,
+			element alternate.urgent,
+			element selected.urgent {
+				background-color: transparent;
+				border-color: transparent;
+				text-color: @foreground;
+			}
+
+			element selected.active {
+				background-color: @blue;
+				border-color: @blue;
+				text-color: @background;
+			}
+
+			element-icon {
+				size: 80px;
+				background-color: transparent;
+				text-color: inherit;
+			}
+
+			element-text {
+				background-color: transparent;
+				text-color: inherit;
+				highlight: inherit;
+				
+				horizontal-align: 0.5;
+				vertical-align: 0.5;
+			}
+
+
+			/*****----- Error Message -----*****/
+			error-message {
+				padding: 40px;
+				border-radius: 10px;
+				background-color: @background-alt;
+				text-color: @foreground;
+			}
+
+			textbox {
+				background-color: transparent;
+				text-color: @foreground;
+
+				horizontal-align: 0.0;
+				vertical-align: 0.5;
+			}
+		'';
+  };
+	
+	xdg.configFile = {
+		"styling/powermenu.rasi".source = ./styling/powermenu.rasi;
+		"styling/wallpaperselector.rasi".source = ./styling/wallpaper-selector.rasi;
+	};
+
+	home.file = {
+		".local/bin/powermenu" = {
+		source = ./scripts/powermenu.sh;
+		executable = true;
+    };
+
+		".local/bin/wallpaper-selector" = {
+		source = ./scripts/wallpaperselector.sh;
+		executable = true;
+		};
+	};
+}

@@ -45,6 +45,15 @@
 			settings.executable = "${pkgs.godot}/bin/godot";
 		};
 
+		web-devicons = {
+			enable = true;
+			settings = {
+				default = true;
+				color_icons = true;
+				strict = true;
+			};
+		};
+
 		## LSP hints ##
 		lsp-signature = {
 			enable = true;
@@ -207,9 +216,9 @@
 				renderer = {
 					icons = {
 						show = {
-							file = false;
-							folder = false;
-							folder_arrow = false;
+							file = true;
+							folder = true;
+							folder_arrow = true;
 						};
 					};
 				};
@@ -222,7 +231,7 @@
 
 			settings = {
 				options = {
-					icons_enable = false;
+					icons_enable = true;
 					always_divide_middle = true;
 					always_show_tabline = true;
 					globalstatus = false;
