@@ -123,7 +123,7 @@ The preferred approach depends on the complexity and portability of the configur
 
 ## Desktop Environment
 
-![NixOS Desktop](./docs/NixOS_Setup.png)
+![start](docs/NixOS_Setup.png)
 
 The graphical environment is based on **Hyprland**, a Wayland compositor.
 
